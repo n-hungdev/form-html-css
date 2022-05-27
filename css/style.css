@@ -36,6 +36,7 @@ body {
   display: grid;
   grid-template-columns: 40% 60%;
 }
+
 .banner {
   position: relative;
   width: 100%;
@@ -100,13 +101,13 @@ body {
 .form__input {
   display: block;
   width: 100%;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .effect {
   border: 0;
   padding-bottom: 6px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
   background-color: transparent;
 }
 .effect ~ .focus-border {
@@ -125,7 +126,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #2f3e46;
+  background-color: #999;
   transition: 0.4s;
 }
 .effect ~ .focus-border:after {
@@ -148,6 +149,7 @@ body {
   z-index: 1;
   transition: 0.3s;
   letter-spacing: 0.5px;
+  cursor: text;
 }
 .effect:focus ~ label,
 .has-content.effect ~ label {
@@ -183,4 +185,25 @@ body {
   color: #8473c2;
   font-weight: 600;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 767.98px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  .banner,
+  .form {
+    padding: 40px 70px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .banner,
+  .form {
+    padding: 40px 30px;
+  }
+  .banner__btn {
+    margin-top: 20px;
+  }
 }
